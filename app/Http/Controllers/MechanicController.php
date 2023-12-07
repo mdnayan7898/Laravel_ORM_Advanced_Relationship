@@ -12,7 +12,12 @@ class MechanicController extends Controller
      */
     public function index()
     {
-        //
+        $mechanic = Mechanic::find(5);
+
+        foreach ($mechanic->roles as $role) {
+            echo $role->pivot->created_at;
+        }
+
     }
 
     /**

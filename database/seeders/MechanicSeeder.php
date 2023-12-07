@@ -13,6 +13,6 @@ class MechanicSeeder extends Seeder
      */
     public function run(): void
     {
-        Mechanic::factory(8)->create();
+        Mechanic::factory(5)->create();
     }
 }

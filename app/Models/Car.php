@@ -10,4 +10,9 @@ class Car extends Model
     use HasFactory;
 
     protected $fillable = ['mechanic_id','name','model'];
+
+
+    public function mechanic(){
+        return $this->belongsTo(Mechanic::class);
+    }
 }

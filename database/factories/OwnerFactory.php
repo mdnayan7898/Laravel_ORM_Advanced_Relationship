@@ -16,8 +16,9 @@ class OwnerFactory extends Factory
      */
     public function definition(): array
     {
+        static $carIdCounter = 1;
         return [
-            'car_id' => Car::inRandomOrder()->first()->id,
+            'car_id' => $carIdCounter++,
             'name' => fake()->name(),
             'mobile' => '01690091590',
             'address' => fake()->address(),

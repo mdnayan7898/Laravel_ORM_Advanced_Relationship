@@ -12,7 +12,8 @@ class CarController extends Controller
      */
     public function index()
     {
-        //
+        $car = Car::with('mechanic')->get();
+        return $car;
     }
 
     /**
